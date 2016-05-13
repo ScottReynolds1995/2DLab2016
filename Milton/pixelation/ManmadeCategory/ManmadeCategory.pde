@@ -1,6 +1,6 @@
 /*
- * Demonstrates how to create a grid rawing function
- */
+* Demonstrates how to create a grid rawing function
+*/
 
 
 //
@@ -18,24 +18,24 @@ interface IDrawableObject {
 
 class DrawableObject implements IDrawableObject {
 
-  float x, y;
-  float w=10, h=10; //arbitrary values so we see something when this is drawn
+    float x, y;
+    float w=10, h=10; //arbitrary values so we see something when this is drawn
 
-  public void setPosition(float xx, float yy) {
-      x = xx;
-      y = yy;
-  }
+    public void setPosition(float xx, float yy) {
+        x = xx;
+        y = yy;
+    }
 
-  public void setSize(float ww, float hh) {
-      w = ww;
-      h = hh;
-  }
+    public void setSize(float ww, float hh) {
+        w = ww;
+        h = hh;
+    }
 
-  public void draw()
-  {
-    rectMode(CORNER);
-    rect(x, y, w, h);
-  }
+    public void draw()
+    {
+        rectMode(CORNER);
+        rect(x, y, w, h);
+    }
 }
 
 class PicDrawableObject implements IDrawableObject {
@@ -81,19 +81,19 @@ IDrawableObject[] gridObjects = new IDrawableObject[OBJECTS_TO_DRAW];
 PImage images[] = new PImage[8];
 void setup()
 {
-  size(512, 256);
+    size(512, 256);
 
-  for (int i = 0; i < 8; i++) {
-      String filename = "contemp" + i + ".jpg";
-      images[i] = loadImage(filename);
-  }
+    for (int i = 0; i < 8; i++) {
+        String filename = "contemp" + i + ".jpg";
+        images[i] = loadImage(filename);
+    }
 
-  setupGridPositions(gridObjects, COLS);
+    setupGridPositions(gridObjects, COLS);
 
-  noStroke();
+    noStroke();
 
-  champagne = loadFont("Champagne&Limousines-48.vlw");
-  fira = loadFont("FiraSans-Regular-48.vlw");
+    champagne = loadFont("Champagne&Limousines-48.vlw");
+    fira = loadFont("FiraSans-Regular-48.vlw");
 }
 
 
@@ -106,34 +106,34 @@ color f = 0;
 
 void draw()
 {
-  // if (frameCount % 60 == 0) f = color(random(255), random(255), random(255));
-  f = color(0x80);
+    // if (frameCount % 60 == 0) f = color(random(255), random(255), random(255));
+    f = color(0x80);
 
-  // draw our cells
-  for (int cell=0; cell < gridObjects.length; cell++)
-  {
-    // let's say that cell 6 (row 2 col 3) is always purple
-    if ( cell == 6 ) {
-      fill(255,0,255);
-    }
-    else
+    // draw our cells
+    for (int cell=0; cell < gridObjects.length; cell++)
     {
-      fill(f);
+        // let's say that cell 6 (row 2 col 3) is always purple
+        if ( cell == 6 ) {
+            fill(255,0,255);
+        }
+        else
+        {
+            fill(f);
+        }
+
+        gridObjects[cell].draw();
     }
 
-    gridObjects[cell].draw();
-  }
+    // ADD HERE the drawing the title of the selection of pictures
 
-  // ADD HERE the drawing the title of the selection of pictures
-
-  textFont(champagne, 42);
-textAlign(CENTER, BOTTOM);
-  fill(0);
-  text("Man Made Structures", width / 2, height - ((height / 3) / 2) + 42);
+    textFont(champagne, 42);
+    textAlign(CENTER, BOTTOM);
+    fill(0);
+    text("Man Made Structures", width / 2, height - ((height / 3) / 2) + 42);
 
 
-  //fill(f);
-  //drawGridAt(mouseX, mouseY, gridObjects);
+    //fill(f);
+    //drawGridAt(mouseX, mouseY, gridObjects);
 }
 
 
@@ -142,45 +142,45 @@ textAlign(CENTER, BOTTOM);
 //
 void setupGridPositions( IDrawableObject[] gridObjects, final int columns )
 {
-  int COL_WIDTH = width/columns; // setup width of columns
-  final int NUM_ROWS = gridObjects.length/columns;
-  int ROW_HEIGHT = height/NUM_ROWS;
+    int COL_WIDTH = width/columns; // setup width of columns
+    final int NUM_ROWS = gridObjects.length/columns;
+    int ROW_HEIGHT = height/NUM_ROWS;
 
-  // position our cells in a 4x3 (4 col x 3 row) grid
-  for (int cell=0; cell < gridObjects.length; cell++)
-  {
-    // figure out column & row for this cell
+    // position our cells in a 4x3 (4 col x 3 row) grid
+    for (int cell=0; cell < gridObjects.length; cell++)
+    {
+        // figure out column & row for this cell
 
-    // wrap around the number of elements per column
-    int col = cell % COLS;
+        // wrap around the number of elements per column
+        int col = cell % COLS;
 
-    // we want the smallest whole number that this index divides into to
-    // get the row
-    int row = cell/COLS;
+        // we want the smallest whole number that this index divides into to
+        // get the row
+        int row = cell/COLS;
 
-    //print("col=" + col);
-    //println(", row=" + row);
+        //print("col=" + col);
+        //println(", row=" + row);
 
-    // create new cell object and put in array
-    IDrawableObject cellObject;
-    // if (cell % 2 == 0) {
-    //     cellObject = new PicDrawableObject(images[cell / 2]);
-    //
-    // }
-    if (cell < 8) {
-        cellObject = new PicDrawableObject(images[cell]);
-    } else {
-        cellObject = new DrawableObject();
+        // create new cell object and put in array
+        IDrawableObject cellObject;
+        // if (cell % 2 == 0) {
+        //     cellObject = new PicDrawableObject(images[cell / 2]);
+        //
+        // }
+        if (cell < 8) {
+            cellObject = new PicDrawableObject(images[cell]);
+        } else {
+            cellObject = new DrawableObject();
+        }
+        // set the cell's position based on row/col
+        // cellObject.x = COL_WIDTH*col;
+        // cellObject.y = ROW_HEIGHT*row;
+        cellObject.setPosition(COL_WIDTH*col, ROW_HEIGHT*row);
+
+        // cellObject.w = COL_WIDTH;
+        // cellObject.h = ROW_HEIGHT;
+        cellObject.setSize(COL_WIDTH, ROW_HEIGHT);
+        gridObjects[cell] = cellObject; // put it in the array
+        //    println("x="+gridObjects[cell].x);
     }
-    // set the cell's position based on row/col
-    // cellObject.x = COL_WIDTH*col;
-    // cellObject.y = ROW_HEIGHT*row;
-    cellObject.setPosition(COL_WIDTH*col, ROW_HEIGHT*row);
-
-    // cellObject.w = COL_WIDTH;
-    // cellObject.h = ROW_HEIGHT;
-    cellObject.setSize(COL_WIDTH, ROW_HEIGHT);
-    gridObjects[cell] = cellObject; // put it in the array
-    //    println("x="+gridObjects[cell].x);
-  }
 }

@@ -117,7 +117,7 @@ color f = 0;
 void draw()
 {
   // if (frameCount % 60 == 0) f = color(random(255), random(255), random(255));
-  f = color(0x80);
+  f = color(0xA0);
 
   // draw our cells
   for (int cell=0; cell < gridObjects.length; cell++)
@@ -166,9 +166,9 @@ void setupGridPositions( IDrawableObject[] gridObjects, final int columns )
       cellObject = new DrawableObject();
     }
 
-    // colour all the cells - we could also make an array containing a color pallette and randomly 
+    // colour all the cells - we could also make an array containing a color pallette and randomly
     // or purposefully pick form that
-    // 
+    //
     colorMode(HSB);
 
     // 3 color - red, green, blue
@@ -183,7 +183,7 @@ void setupGridPositions( IDrawableObject[] gridObjects, final int columns )
       {
         cellObject.setColor( color(0, 255, 220) );
         break;
-      }      
+      }
 
     case 1:
       {
