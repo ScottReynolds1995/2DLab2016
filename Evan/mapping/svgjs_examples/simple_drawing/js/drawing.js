@@ -19,7 +19,7 @@ rect.click(function() {
   this.fill({ color: '#e0e' })
 });
 
-var text = draw.text("Lorem ipsum dolor sit amet consectetur.\nCras sodales imperdiet auctor.")
+var text = draw.text("Lorem ipsum dolor sit amet consectetur.\nCras sodales imperdiet auctor.");
 
 text.attr({x: 100, y:20});
 
