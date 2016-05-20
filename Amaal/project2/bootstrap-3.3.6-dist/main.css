@@ -1,0 +1,35 @@
+#mapid {
+    height: 500px;
+   
+}
+
+img.thumbnail {  
+ height: 430px;
+ border-radius: 0%;
+ margin-top: 50px;
+ margin-left: 0px;
+    
+}
+
+
+
+p.text {
+    margin-top: 200px;
+    text-align: center;
+    color: black;
+    font-family:'Volkhov', serif;
+    font-size: 50px;
+    font-style: italic;
+
+}
+
+p.quote {
+    text-align: center;
+    color: black;
+    font-family:'Volkhov', serif;
+    font-size: 25px;
+    font-style: italic;
+
+
+}
+

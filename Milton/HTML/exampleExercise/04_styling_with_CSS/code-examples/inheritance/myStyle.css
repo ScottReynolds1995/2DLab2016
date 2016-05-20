@@ -1,0 +1,33 @@
+body {
+/* === font rules inherited === */
+/*
+		  font-family: arial;
+*/
+		 background-color: rgb(50,0,50);
+		 color: rgb(255,255,255);
+		 padding: 20px; }
+h1 {
+		 color: rgb(255,0,0); }
+
+h2 {
+    color: rgb(255,0,0); }
+
+span {
+    font-size: 125%;
+}
+
+span.same {
+    font-size: inherit;
+}
+
+
+/* ==== padding NOT inherited (you have to respecify) === */
+/*
+#intro {
+		 padding: 20px; }
+*/
+
+/* ==== padding inherited (or use inherit) === */
+/*
+#intro { padding: inherit;}
+*/

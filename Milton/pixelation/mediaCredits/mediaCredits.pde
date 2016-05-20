@@ -5,8 +5,8 @@ void setup() {
   size(940, 800);
   background(250, 243, 230);
 
-  champagne = loadFont("Champagne&Limousines-48.vlw");
-  fira = loadFont("FiraSans-Thin-48.vlw");
+  champagne = loadFont("Champagne&Limousines-Bold-48.vlw");
+  fira = loadFont("FiraSans-Medium-48.vlw");
 }
 
 void draw() {
@@ -16,7 +16,7 @@ void draw() {
 
   textFont(fira, 42);
   textAlign(CENTER, CENTER);
-  text("My Love Story", 470, 40);
+  text("Old Boy", 470, 45);
   rect(150,70, 640, 10);
 
   text(xNumberOfChar(90, "."), 470, 120);

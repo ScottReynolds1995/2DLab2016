@@ -23,10 +23,10 @@ class NoiseCell implements ICell {
 
                                 float r = random(255);
                                 if(itsGrey){
-                                        pixels[y * width + x] = color(r);
+                                        pixels[y * width + x] = color(r,0,r);
                                 }
                                 else{
-                                        pixels[y * width + x] = color(random(255),random(255), random(255));
+                                        pixels[y * width + x] = color(0,r,r);
                                 }
 
                         }

@@ -1,0 +1,5 @@
+[
+    {"name" : "Ravensbourne", "position": [51.5009221,0.0049185], "dir" : "images/rave.jpg"},
+    {"name" : "Tokyo Dinner", "position": [51.5118571,-0.1315291], "dir" : "images/tokyoDinner.jpg"},
+    {"name" : "St. James' Park", "position": [51.502705,-0.129914], "dir" : "images/crow.jpg"}
+]

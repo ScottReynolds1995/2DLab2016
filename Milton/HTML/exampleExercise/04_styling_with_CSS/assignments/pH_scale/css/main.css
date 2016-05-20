@@ -1,0 +1,42 @@
+div.alk, div.neu, div.aci {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+h1{
+    font: 2em arial, sans-serif;
+    margin: .5em;
+}
+
+div p{
+    display: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+    height: 2em%;
+    margin-top: 40%;
+    margin-bottom: auto;
+    text-align: center;
+    vertical-align: middle;
+    left: 0;
+    top: 50%;
+    font-size: 1.6em;
+    font: 15px arial, sans-serif;
+}
+
+
+div.alk{
+    background-color: #0088DD;
+
+}
+
+div.neu{
+    background-color: #00BB88;
+}
+
+div.aci{
+    background-color: #EE3E80;
+}

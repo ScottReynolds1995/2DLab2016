@@ -4,7 +4,7 @@
 ICell fourByFour;
 
 void setup() {
-    size(1024, 1024);
+    size(1654, 2339);
     // mainGrid = new Grid(new ICell[] {
     //     new ImageCell("clouds.jpg"),
     //     new ImageCell("crate200.jpg"),
@@ -17,8 +17,8 @@ void setup() {
 
     // mainGrid = new PlainColourCell(300, 200, color(255, 255, 0));
     // noiseGrid = new NoiseCell(300, 200, true);
-    fourByFour = new UpByDown( new SideBySide(new NoiseCell(200, 200, false), new NoiseCell(200, 200, true)),
-                               new SideBySide(new NoiseCell(200, 200, true), new NoiseCell(200, 200, false))
+    fourByFour = new UpByDown( new SideBySide(new NoiseCell(width / 2, height / 2, false), new NoiseCell(width / 2, height / 2, true)),
+                               new SideBySide(new NoiseCell(width / 2, height / 2, true), new NoiseCell(width / 2, height / 2, false))
                              );
 }
 
