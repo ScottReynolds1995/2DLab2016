@@ -69,10 +69,10 @@ function type(d) {
 var resizeTimer;
 
 $(window).resize( function() {
-    
+
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
-        
+
         // Run code here, resizing has "stopped
 
         // blow it all away
@@ -97,7 +97,7 @@ $(window).resize( function() {
         .orient("left")
         .ticks(10, "%");
 
-        
+
         // re-add
     var svg = d3.select("#graph").append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -137,7 +137,7 @@ $(window).resize( function() {
           .attr("y", function(d) { return y(d.frequency); })
           .attr("height", function(d) { return height - y(d.frequency); });
     }); // end tsv load
-        
-        
+
+
   }, 250); // end timeout func
 });
