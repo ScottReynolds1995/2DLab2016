@@ -38,7 +38,7 @@ var treeData = [
 var treemargin = {top: 20, right: 20, bottom: 30, left: 20},
     treewidth = $("#tree").width() - treemargin.left - treemargin.right,
     treeheight = $("#tree").height() - treemargin.top - treemargin.bottom;
-	
+
 var i = 0,
 	duration = 750,
 	treeroot;
@@ -56,9 +56,9 @@ var treesvg = d3.select("#tree").append("svg")
 	.attr("transform", "translate(" + treemargin.left + "," + treemargin.top + ")");
 
 treeroot = treeData[0];
-treeroot.x0 = height / 2;
+treeroot.x0 = treeheight / 2;
 treeroot.y0 = 0;
-  
+
 treeupdate(treeroot);
 
 //d3.select(self.frameElement).style("height", "500px");
@@ -89,8 +89,8 @@ function treeupdate(source) {
   nodeEnter.append("text")
 	  .attr("x", function(d) {
         var val = -13;
-        if (d.parent != "null") 
-            val = d.children || d._children ? -13 : 13; 
+        if (d.parent != "null")
+            val = d.children || d._children ? -13 : 13;
         return val;
       })
 	  .attr("dy", function(d) {
@@ -98,10 +98,10 @@ function treeupdate(source) {
         else return "-1.34em";
        })
 	  .attr("text-anchor", function(d) {
-        if (d.parent == "null") 
+        if (d.parent == "null")
             return "start";
         else
-            return d.children || d._children ? "end" : "start"; 
+            return d.children || d._children ? "end" : "start";
       })
 	  .text(function(d) { return d.name; })
 	  .style("fill-opacity", 1e-6);
