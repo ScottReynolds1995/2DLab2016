@@ -1,8 +1,9 @@
 [
-    {"name": "Southwark Brewery", "position": ["51.5007", "-0.077"]},
+    {"name": "Southwark Brewery", "position": [51.5007, -0.077]},
     {"name": "Anspach & Hobday", "position": [51.4988, -0.0734]},
     {"name": "Brew By Numbers", "position": [51.4974, -0.0721]},
     {"name": "The Kernal Brewery", "position": [51.4948, -0.0686]},
     {"name": "Partizan Brewery", "position": [51.4918, -0.0599]},
     {"name": "Fourpure Brewing Co", "position": [51.4901, -0.0553]},
+    
 ]
