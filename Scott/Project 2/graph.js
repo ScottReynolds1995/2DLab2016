@@ -31,7 +31,7 @@ function doAllTheGraph() {
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.tsv("data.tsv", type, function(error, data) {
+    d3.tsv("graphdata.tsv", type, function(error, data) {
         if (error) throw error;
 
         x.domain(data.map(function(d) { return d.letter; }));
