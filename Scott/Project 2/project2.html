@@ -14,7 +14,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="project2.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -26,9 +26,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="map.css" />
     <link rel="stylesheet" href="graph.css" />
-  </head>
+      <link rel="stylesheet" href="piechart.css" />
+
+    </head>
 
   <body>
 
@@ -44,15 +46,14 @@
       </div>
 
       <div class="row">
-       
-        <div id="graph" class="hh col-md-4"></div>
-        <div class="fill-blue hh col-md-4">Random Text</div>
+         <div id="graph" class="hh col-md-4"></div>
+         <div class="fill-blue hh col-md-4">Random Text</div>
          <div class="fill-blue hh col-md-4">Random Text</div> 
       </div>
         
       <div class="row">
 <!--        <div id="tree" class="hh col-md-12"></div>-->
-
+       <div id="piechart" class="hh col-md-12"></div>
           
         </div>
 
@@ -69,11 +70,11 @@
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-    <script src="main.js"></script>
+    <script src="map.js"></script>
 
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="graph.js"></script>
     <script src="treediagram.js"></script>
-      
+      <script src="piechart.js"></script>
   </body>
 </html>
