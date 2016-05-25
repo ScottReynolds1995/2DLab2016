@@ -9,7 +9,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v8/tiles/{z}/{x}/{y}?a
     accessToken: 'pk.eyJ1IjoiY2Fzc2llbGRvdGNvbSIsImEiOiJfOXlpQmFJIn0.W5qn7J_RcOV8502RXsDc3Q'
 }).addTo(mymap);
 
-$.getJSON("data.json", function(d) {
+$.getJSON("mapdata.json", function(d) {
     for (var i = 0; i < d.length; i++) {
         console.log(d[i].position);
         var pos = d[i].position;
