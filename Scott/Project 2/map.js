@@ -14,8 +14,10 @@ function jsonFunc(data) {
         var pos = data[i].position;
          
         L.marker(pos).addTo(mymap).bindPopup(
+            
               '<div class="popup">'+data[i].name+'</div>' +
-              '<div class="popup"><img src="' + data[i].img + '"/></div>' 
+              '<div class="popup"><img src="' + data[i].img + '"/></div>'
+            
         
              
         );
@@ -28,7 +30,7 @@ var mapData = [
     {
         "name": "Southwark Brewery",
         "position": ["51.5007", "-0.077"],
-        "img": 'http://cuteimages.net/data/2015/11/small-kitten-photos-cuteimages.net.jpg'
+        "img": 'data/southwarkbrewingco.jpg'
         
      
     },
@@ -36,36 +38,36 @@ var mapData = [
     {
         "name": "Anspach & Hobday",
         "position": ["51.4988", "-0.0734"],
-        "img": 'http://cuteimages.net/data/2015/11/small-kitten-photos-cuteimages.net.jpg'
+        "img": 'data/anspachandhobday.jpg'
         
     },
     
     {
         "name": "Brew By Numbers",
         "position": ["51.4974", "-0.0721"],
-        "img": 'http://cuteimages.net/data/2015/11/small-kitten-photos-cuteimages.net.jpg'
+        "img": 'data/brewbynumber.jpg'
         
     },
     
        {
         "name": "The Kernal Brewery",
         "position": ["51.4948", "-0.0686"],
-        "img": 'http://cuteimages.net/data/2015/11/small-kitten-photos-cuteimages.net.jpg'
+           "img": 'data/kernal.jpg'
            
     },
     
     {
         "name": "Partizan Brewery",
         "position": ["51.4918", "-0.0599"],
-        "img": 'http://cuteimages.net/data/2015/11/small-kitten-photos-cuteimages.net.jpg'
+        "img": 'data/partizan.jpg'
         
     },
     
      {
         "name": "Fourpure Brewing Co",
         "position": ["51.4901", "-0.0553"],
-        "img": 'http://cuteimages.net/data/2015/11/small-kitten-photos-cuteimages.net.jpg'
-     
+        "img": 'data/fourpure.jpg'
+      
      },
 
 
