@@ -32,4 +32,6 @@ div#graph {
   .popup img {
       width: 200px;
   }
-
+#graph{
+    margin-bottom: 30px;
+}
