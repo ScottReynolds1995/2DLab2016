@@ -1,3 +1,5 @@
+console.log("graphloaded");
+
 function type(d) {
   d.frequency = +d.frequency;
   return d;
@@ -40,7 +42,17 @@ function doAllTheGraph() {
         svg.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
+            .call(xAxis)
+            .selectAll("text")
+            .attr("y", 0)
+            .attr("x", 9)
+            .attr("dy", ".35em")
+            .attr("transform", function(d){
+                console.log(d);
+                return "rotate(65)"
+            })
+            .style("text-anchor", "start");
+
 
         svg.append("g")
             .attr("class", "y axis")
@@ -52,6 +64,7 @@ function doAllTheGraph() {
             .style("text-anchor", "end")
             .text("ABV%");
 
+       
         svg.selectAll(".bar")
             .data(data)
             .enter().append("rect")
@@ -61,6 +74,13 @@ function doAllTheGraph() {
             .attr("y", function(d) { return y(d.frequency); })
             .attr("height", function(d) { return height - y(d.frequency); });
     });
+
+//     svg.append("g")
+//            .attr("class", "x axis")
+//            .attr("id", "x")
+//            .attr("transform", "translate(0," + height +")")
+//            .call(xAxis)
+//            
 
 }
 
