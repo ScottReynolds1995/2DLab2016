@@ -1,10 +1,12 @@
 .arc text {
-  font: 10px sans-serif;
-  text-anchor: middle;
+    
+    font: 8px sans-serif;
+  text-anchor: center;
+
 }
 
 .arc path {
-  stroke: #fff;
+  stroke: grey;
 }
 #piechart {
     height: 400px;

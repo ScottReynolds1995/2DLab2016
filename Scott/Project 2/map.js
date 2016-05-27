@@ -23,6 +23,7 @@ function jsonFunc(data) {
         );
 
     }
+    
 };
 var mapData = [
     //{"name": "someone", "position": [50.0, 0.0], "img": 'httpxxxxxx'},
