@@ -17,7 +17,7 @@ function jsonFunc(data) {
             
             
               '<div class="popup">'+data[i].name+'</div>' +
-              '<div class="popup"><img src="' + data[i].img + '"/></div>'+
+//              '<div class="popup"><img src="' + data[i].img + '"/></div>'+
     '<div class="popup">' + 
     '<audio controls>' +
     '<source src="' + data[i].snd + '" type="audio/mpeg">' +
@@ -35,28 +35,28 @@ var mapData = [
     {
         "name": "Southwark Brewery",
         "position": ["51.5007", "-0.077"],
-        "img": 'data/southwarkbrewingco.jpg',
+//        "img": 'data/southwarkbrewingco.jpg',
         "snd": 'data/southwarkbrewingco.mp3'     
     },
     
     {
         "name": "Anspach & Hobday",
         "position": ["51.4988", "-0.0734"],
-        "img": 'data/anspachandhobday.jpg',
+//        "img": 'data/anspachandhobday.jpg',
         "snd": 'data/anspachandhobday.mp3'
     },
     
     {
         "name": "Brew By Numbers",
         "position": ["51.4974", "-0.0721"],
-        "img": 'data/brewbynumber.jpg',
+//        "img": 'data/brewbynumber.jpg',
         "snd": 'data/brewbynumber.mp3'
     },
     
        {
         "name": "The Kernal Brewery",
         "position": ["51.4948", "-0.0686"],
-           "img": 'data/kernal.jpg',
+//           "img": 'data/kernal.jpg',
            "snd": 'data/kernal.mp3'
            
     },
@@ -64,14 +64,14 @@ var mapData = [
     {
         "name": "Partizan Brewery",
         "position": ["51.4918", "-0.0599"],
-        "img": 'data/partizan.jpg',
+//        "img": 'data/partizan.jpg',
         "snd": 'data/partizan.mp3'
     },
     
      {
         "name": "Fourpure Brewing Co",
         "position": ["51.4901", "-0.0553"],
-        "img": 'data/fourpure.jpg',
+//        "img": 'data/fourpure.jpg',
       "snd": 'data/fourpure.mp3'
      },
 
