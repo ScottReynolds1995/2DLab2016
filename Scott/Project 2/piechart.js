@@ -1,3 +1,4 @@
+function doAllGraph(){ 
 var pie = new d3pie("piechart", {
 	"header": {
 		"title": {
@@ -106,4 +107,19 @@ var pie = new d3pie("piechart", {
 		}
 	},
 	"callbacks": {}
+});
+
+}
+doAllGraph();
+
+var resizeTimer;
+
+$(window).resize( function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        // Run code here, resizing has "stopped
+        // blow it all away
+        d3.selectAll("#piechart svg").remove();
+        doAllGraph();
+  }, 250); // end timeout func
 });
