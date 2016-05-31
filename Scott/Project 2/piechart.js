@@ -3,7 +3,7 @@ var pie = new d3pie("piechart", {
 		"title": {
 			"text": "Most Intriguing Brewery Based On Sound",
 			"color": "#000000",
-			"fontSize": 24
+			"fontSize": 17
 		},
 		"subtitle": {
 			"text": "(sound taken form 10 second recording)",
@@ -19,8 +19,13 @@ var pie = new d3pie("piechart", {
 		"location": "bottom-left"
 	},
 	"size": {
-		"pieInnerRadius": "23%",
-		"pieOuterRadius": "77%"
+		 "canvasHeight" : 400,
+         "canvasWidth" : 400,
+
+        //        "canvasWidth" : $("#piechart").width(),
+        "pieInnerRadius": "23%",
+		"pieOuterRadius": "50%"
+       
 	},
 	"data": {
 		"sortOrder": "value-desc",

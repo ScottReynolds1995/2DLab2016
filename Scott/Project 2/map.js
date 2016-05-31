@@ -15,6 +15,7 @@ function jsonFunc(data) {
          
         L.marker(pos).addTo(mymap).bindPopup(
             
+            
               '<div class="popup">'+data[i].name+'</div>' +
               '<div class="popup"><img src="' + data[i].img + '"/></div>'+
     '<div class="popup">' + 
