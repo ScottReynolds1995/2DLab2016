@@ -6,7 +6,7 @@ function type(d) {
 }
 
 function doAllTheGraph() {
-    var margin = {top: 20, right: 20, bottom: 100, left: 40},
+    var margin = {top: 20, right: 20, bottom: 120, left: 80 },
         width = $("#graph").width() - margin.left - margin.right,
         height = $("#graph").height() - margin.top - margin.bottom;
 
