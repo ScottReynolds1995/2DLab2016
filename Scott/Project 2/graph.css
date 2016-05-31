@@ -1,13 +1,16 @@
+
+
+
 .bar {
-    fill: yellow;
+    fill: #33adff;
 }
 
 .bar:hover {
-    fill: brown;
+    fill: lightgrey;
 }
 
 .axis {
-    font: 10px sans-serif;
+    font: 13px sans-serif;
 }
 
 .axis path,

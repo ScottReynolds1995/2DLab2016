@@ -1,49 +1,104 @@
-
-
-var width = $("#piechart").width() 
-    height = $("#piechart").height() 
-    radius = Math.min(width, height) / 2;
-
-var color = d3.scale.ordinal()
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
-
-var arc = d3.svg.arc()
-    .outerRadius(radius - 10)
-    .innerRadius(0);
-
-var labelArc = d3.svg.arc()
-    .outerRadius(radius - 40)
-    .innerRadius(radius - 40);
-
-var pie = d3.layout.pie()
-    .sort(null)
-    .value(function(d) { return d.population; });
-
-var svg = d3.select("#piechart").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-  .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-d3.csv("piechart.csv", type, function(error, data) {
-  if (error) throw error;
-
-  var g = svg.selectAll(".arc")
-      .data(pie(data))
-    .enter().append("g")
-      .attr("class", "arc");
-
-  g.append("path")
-      .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.age); });
-
-  g.append("text")
-      .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .text(function(d) { return d.data.age; });
+var pie = new d3pie("piechart", {
+	"header": {
+		"title": {
+			"text": "Most Intriguing Brewery Based On Sound",
+			"color": "#000000",
+			"fontSize": 24
+		},
+		"subtitle": {
+			"text": "(sound taken form 10 second recording)",
+			"color": "#999999",
+			"fontSize": 12
+		},
+		"titleSubtitlePadding": 12
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"pieInnerRadius": "23%",
+		"pieOuterRadius": "77%"
+	},
+	"data": {
+		"sortOrder": "value-desc",
+		"smallSegmentGrouping": {
+			"enabled": true,
+			"valueType": "value"
+		},
+		"content": [
+			{
+				"label": "FourPure",
+				"value": 4,
+				"color": "#33adff"
+			},
+			{
+				"label": "Partizan",
+				"value": 5,
+				"color": "#4db8ff"
+			},
+			{
+				"label": "The Kernal",
+				"value": 4,
+				"color": "#66c2ff"
+			},
+			{
+				"label": "Brew By Numbers",
+				"value": 7,
+				"color": "#80ccff"
+			},
+			{
+				"label": "Anspach and Hobday",
+				"value": 3,
+				"color": "#99d6ff"
+			},
+			{
+				"label": "Southwark Brewery",
+				"value": 2,
+				"color": "#b3e0ff"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "none",
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "back",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 71
+		}
+	},
+	"callbacks": {}
 });
-
-function type(d) {
-  d.population = +d.population;
-  return d;
-}

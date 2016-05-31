@@ -20,18 +20,3 @@ div.fill-blue {
 div.hh {
     height: 400px;
 }
-div#graph {
-    background-color: #808080;
-
-}
-  .popup {
-      border: 1%;
-      margin-bottom: 2%;
-  }
-  
-  .popup img {
-      width: 200px;
-  }
-#graph{
-    margin-bottom: 30px;
-}

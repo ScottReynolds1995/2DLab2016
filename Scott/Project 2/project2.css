@@ -1,7 +1,7 @@
 
 body {
   padding-top: 50px;
-    background-color: grey;
+    background-color: lightgray;
 
 }
 .starter-template {
@@ -31,7 +31,7 @@ p.aimText {
    padding-left: 20px;
    margin-top: 150px;
    margin-bottom: 150px;
-    color:antiquewhite;
+    color:black;
 }
 
 .brew {
